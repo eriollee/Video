@@ -1,16 +1,13 @@
 package com.example.admin.helloworld;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-import java.util.ArrayList;
-import java.util.Queue;
-
-public class MainActivity extends AppCompatActivity {
+public class SplashActivity extends Activity {
     private SharedPreferences mSharedPreference; //读取配置文件
     private static  final int GO_HOME = 1;//进入HOME页
     private static final  int GO_GUIDE = 2;//进入引导页
@@ -51,12 +48,12 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void startHomeActivity() {
-        Intent intent = new Intent(MainActivity.this,HomeActivity.class);
+        Intent intent = new Intent(SplashActivity.this,HomeActivity.class);
         startActivity(intent);
         finish();
     }
     private void startGuideActivity(){
-        Intent intent = new Intent(MainActivity.this,GuideActivity.class);
+        Intent intent = new Intent(SplashActivity.this,GuideActivity.class);
         startActivity(intent);
         finish();
     }
