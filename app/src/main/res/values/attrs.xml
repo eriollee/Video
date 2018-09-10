@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+3     <declare-styleable name="CircleImageView">
+4         <attr name="civ_border_width" format="dimension" />
+5         <attr name="civ_border_color" format="color" />
+6         <attr name="civ_border_overlay" format="boolean" />
+7         <attr name="civ_fill_color" format="color" />
+8     </declare-styleable>
+</resources>

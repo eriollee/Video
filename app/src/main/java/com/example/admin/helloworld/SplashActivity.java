@@ -11,7 +11,7 @@ public class SplashActivity extends Activity {
     private SharedPreferences mSharedPreference; //读取配置文件
     private static  final int GO_HOME = 1;//进入HOME页
     private static final  int GO_GUIDE = 2;//进入引导页
-    private static final  int ENTER_DURATION = 2000;//延时
+    private static final  int ENTER_DURATION = 1000;//延时
     private Handler mHandler = new Handler(){
         @Override
         public void handleMessage(Message msg) {
