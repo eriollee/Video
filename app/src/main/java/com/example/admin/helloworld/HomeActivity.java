@@ -81,9 +81,9 @@ public class HomeActivity extends BaseActivity {
     private void switchFragment(Class<?> clazz){
         Fragment  fragment =  FragmentManagerWrapper.getmInstance().createFragment(clazz);
         if(fragment.isAdded()){
-            mFragmentManager.beginTransaction().hide(mCurrentFragment).show(fragment);
+            mFragmentManager.beginTransaction().hide(mCurrentFragment).show(fragment).commitAllowingStateLoss();
         }else {
-            mFragmentManager.beginTransaction().hide(mCurrentFragment).commitAllowingStateLoss();
+            mFragmentManager.beginTransaction().hide(mCurrentFragment).add(R.id.fl_main_content, fragment).commitAllowingStateLoss();
         }
         mCurrentFragment = fragment;
     }
