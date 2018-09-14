@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
+import android.util.Log;
 
 public class SplashActivity extends Activity {
     private SharedPreferences mSharedPreference; //读取配置文件
@@ -33,13 +34,15 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mSharedPreference = getSharedPreferences("config",MODE_PRIVATE);
+    //    mSharedPreference = getSharedPreferences("config",MODE_PRIVATE);
         init();
     }
 
     private void init() {
-        Boolean isFirstIn = mSharedPreference.getBoolean("mIsFirstIn",true);
-        if(isFirstIn){
+        SharedPreferences pref = getSharedPreferences("config",MODE_PRIVATE);
+        Boolean isFirstIn = pref.getBoolean("mIsFirstIn",true);
+        Log.d("isFirstIn",">> isFirstIn=== " + isFirstIn);
+        if(isFirstIn == true){
             mHandler.sendEmptyMessageDelayed(GO_GUIDE,ENTER_DURATION);
         }else {
             mHandler.sendEmptyMessageDelayed(GO_HOME,ENTER_DURATION);

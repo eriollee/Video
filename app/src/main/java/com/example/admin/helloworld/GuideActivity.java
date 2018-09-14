@@ -100,8 +100,8 @@ public class GuideActivity extends Activity implements ViewPager.OnPageChangeLis
                     imageView.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
-                            startHomeActivity();
                             setGuided();
+                            startHomeActivity();
                         }
                     });
                 }
@@ -133,8 +133,9 @@ public class GuideActivity extends Activity implements ViewPager.OnPageChangeLis
 
         private void setGuided(){
             SharedPreferences sp = getSharedPreferences("config",MODE_PRIVATE);
-            sp.edit().putBoolean("mIsFirstIn",false);
-            sp.edit().commit();
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putBoolean("mIsFirstIn",false);
+            editor.commit();
         }
 
 
