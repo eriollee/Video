@@ -11,6 +11,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.admin.helloworld.detail.DetailListActivity;
+import com.example.admin.helloworld.model.Channel;
 import com.hejunlin.superindicatorlibray.CircleIndicator;
 import com.hejunlin.superindicatorlibray.LoopViewPager;
 
@@ -47,6 +49,8 @@ public class HomeFragment extends BaseFragment {
                         break;
                     default:
                         //TODO
+                        //跳转对应频道
+                        DetailListActivity.launchDetailListActivity(getActivity(),position+1);
                         break;
                 }
            }

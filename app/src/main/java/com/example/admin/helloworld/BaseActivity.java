@@ -37,6 +37,10 @@ public abstract class BaseActivity extends AppCompatActivity {
         }
     }
 
+    protected void setSupportArrowActionBar(boolean isSupport){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(isSupport);
+    }
+
     protected void setActionBarIcon(int resId){
         if(mToolbar != null){
             mToolbar.setNavigationIcon(resId);

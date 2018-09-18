@@ -1,6 +1,8 @@
-package com.example.admin.helloworld;
+package com.example.admin.helloworld.model;
 
 import android.content.Context;
+
+import com.example.admin.helloworld.R;
 
 import java.io.Serializable;
 

@@ -37,7 +37,7 @@ public class HomeActivity extends BaseActivity {
         mActionBarDrawerToggle.syncState();
         mDrawerLayout.addDrawerListener(mActionBarDrawerToggle);
         mPreItem = mNavigationView.getMenu().getItem(0);
-        mPreItem.setCheckable(true);
+        mPreItem.setChecked(true);
         initFragment();
         handleNavigationViewItem();
     }
@@ -72,7 +72,7 @@ public class HomeActivity extends BaseActivity {
                 }
                 mPreItem = item;
                 mDrawerLayout.closeDrawer(Gravity.LEFT);
-                item.setCheckable(true);
+                item.setChecked(true);
                 return false;
             }
         });
