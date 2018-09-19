@@ -9,14 +9,14 @@
 
     // RecyclerView
 
-    <!--<com.hejunlin.imooc_supervideo.widget.PullLoadRecyclerView-->
-        <!--android:id="@+id/pullloadRecyclerView"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:scrollbars="none"-->
-        <!--android:padding="@dimen/dimen_4dp"-->
-        <!--android:overScrollMode="never"-->
-        <!--/>-->
+    <com.example.admin.helloworld.widget.PullLoadRecycleView
+        android:id="@+id/pullloadRecyclerView"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:padding="@dimen/dimen_4dp"
+        android:overScrollMode="never"
+        />
 
     <TextView
         android:id="@+id/tv_empty"
